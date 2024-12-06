@@ -1,0 +1,527 @@
+/* GLOBAL */
+
+:root {
+    --bg-color: #fff;
+    --header-color: #6b6b6b;
+    --paragraph-color: #999;
+    --footer-color: #777;
+    --footer-bg-color: #282828;
+}
+
+img {max-width:100%;}
+
+body {
+    background-color: var(--bg-color);
+    margin: 0;
+    padding: 0;
+    cursor: default;
+}
+
+a {
+    text-decoration: none;
+    color: var(--footer-color);
+}
+
+h1, h2, h3, h4, h5, h6 {margin: 0.8rem auto;}
+
+/* LAYOUT */
+
+h1, h2, p {
+    text-align: center;
+    margin: 0.2em auto;
+}
+
+header {
+    display: flex;
+    flex-direction: row;
+    height: 6rem;
+    width: 100%;
+    align-items: center;
+    margin-bottom: 6rem;
+}
+
+header > .flex-container > button {
+    display: none;
+    background-color: inherit;
+    border: none;
+    transition: 0.3s;
+}
+
+header > .flex-container > button > i:hover {
+    color: var(--footer-bg-color);
+    transition: 0.3s;
+}
+
+header > .flex-container {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    width: 100%;
+    justify-content: space-evenly;
+    margin: 0 0.5rem;
+}
+
+header > .flex-container > * {
+    padding: 1rem;
+}
+
+header > .flex-container > .logo-text {
+    margin-right: auto;
+    font-size: 2.2em;
+    padding-left: 0;
+    font-family: "Roboto", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+}
+
+header > nav > img {
+    height: 5rem;
+}
+
+main > p {
+    width: 90%;
+    display: block;
+    margin: 0 auto;
+}
+
+main > .col-container-3 {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    padding: 1rem;
+    margin: 5rem auto;
+}
+
+main > .col-container-3 > .flex-container {
+    width: 100%;
+    padding: 1.4rem;
+}
+
+main > .col-container-3 > .flex-container > .portfolio-text > p {
+    text-align: left;
+}
+
+main > .col-container-6 {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    margin-top: 4rem;
+    margin-bottom: 6rem;
+    padding: 0 1.8rem;
+}
+
+main > .col-container-6 > .flex-container {
+    display: flex;
+    flex: 4 100%;
+    flex-direction: row;
+}
+
+main > .col-container-6 > .flex-container > .teammate {
+    /* flex: 2 100%; */
+    padding: 1.8rem;
+}
+
+main > .col-container-6 > .cursor {
+    flex: 1;
+    padding: 1.8rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 2.5em;
+    color: var(--paragraph-color);
+}
+
+footer {
+    padding: 2.5rem;
+}
+
+footer > hr {
+    margin: 2rem auto;  
+}
+
+footer > * {
+    text-align: center;
+}
+
+footer > .col-container-3 {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    padding: 1rem;
+    margin: 4rem auto;
+}
+
+footer > .col-container-3 > .flex-container {
+    display: flex;
+    flex-direction: column;
+    width: 33%;
+}
+
+footer > .col-container-3 > .flex-container > p {
+    margin: 0;
+}
+
+footer > .flex-container, 
+footer > .flex-container > a > span, 
+footer > .flex-container > a > span > i,
+.teammate > .team-social-media-links,  
+.teammate > .team-social-media-links > a > i{
+    display: flex;
+    align-items: center;
+    justify-content: center;;
+}
+
+.teammate > .team-social-media-links {
+    justify-content: left;
+}
+
+/* COLORS */
+
+.header-color {
+    color: var(--header-color);
+}
+
+.paragraph-color {
+    color: var(--paragraph-color);
+}
+
+.footer-color {
+    color: var(--footer-color);
+}
+
+.dark-color {
+    color: var(--footer-bg-color);
+}
+
+.light-color {
+    color: var(--bg-color);
+}
+
+.footer-bg-color {
+    background-color: var(--footer-bg-color);
+}
+
+/* FONTS */
+
+body {
+    font-family: "Roboto", Arial, Helvetica, sans-serif;
+}
+
+header > .flex-container > *, .portfolio-text > * {
+    font-size: 1.8em;
+}
+
+main > h1, main > h2 {
+    font-family: "Roboto" , "Open Sans", sans-serif;
+    font-weight: 100;
+    font-size: 5em;
+}
+
+main > h2 {
+    font-size: 4em;
+}
+
+.teammate > h4 {
+    font-size: 1.1em;
+}
+
+main > p {
+    font-size: 1.5em;
+    line-height: 1.5em;
+}
+
+main > p:nth-child(5) {
+    width: 60%;
+}
+
+.flex-container > h4 {
+    font-size: 1.1em;
+    font-weight: 600;
+    margin: 0.7em auto;
+}
+
+.flex-container > p, .portfolio-text > p {
+    font-size: 1.3em;
+    line-height: 1.7em;
+}
+
+footer > .col-container-3 > .flex-container > p {
+    line-height: 1.5em;
+}
+
+footer > .col-container-3 > .flex-container > h6 {
+    font-size: 1.2em;
+    margin-bottom: 1.2rem;
+}
+
+footer > .flex-container > a > span {
+    font-size: 1.4em;
+    font-weight: 700;
+    margin: 1rem;
+    letter-spacing: 0.1em;
+    color: var(--paragraph-color);
+}
+
+/* ICONS */
+
+footer > .flex-container > a > span > i {
+    background-color: var(--paragraph-color);
+    color: var(--footer-bg-color);
+    width: 3rem;
+    height: 3rem;
+    border-radius: 50%;
+    margin: 0.5em;
+    letter-spacing: 0;
+}
+
+.team-social-media-links > a > i {
+    background-color: var(--paragraph-color);
+    color: var(--bg-color);
+    width: 1.8rem;
+    height: 1.8rem;
+    border-radius: 50%;
+    margin-right: 1em;
+    opacity: 0.6;
+}
+
+/* HOVER */
+
+.header-links {
+    transition: 0.5s;
+}
+
+.header-links:hover {
+    color: var(--footer-bg-color);
+    transition: 0.5s;
+}
+
+.team-social-media-links > a > i:hover {
+    background-color: var(--header-color);
+    transition: 0.3s;
+}
+
+footer > .flex-container > a > span:hover {
+    color: var(--bg-color);
+    transition: 0.3s;
+}
+
+footer > .flex-container > a > span:hover > i {
+    background-color: var(--bg-color);
+    transition: 0.3s;
+}
+
+main > .col-container-6 > .cursor:hover {
+    color: var(--header-color);
+    transition: 0.3s;
+    cursor: pointer;
+}
+
+p > a:hover {
+    color: var(--bg-color);
+    text-decoration: underline;
+    transition: 0.3s;
+}
+
+/* RESPONSIVE */
+
+@media only screen and (min-width: 1310px) {
+
+    .teammate > h4 {
+        font-size: 1.7em;
+    }
+}
+
+@media only screen and (max-width: 1024px) {
+
+    header > .flex-container { 
+        margin: 0 1.5rem;
+    }
+
+    header > .flex-container > button {
+        display: block;
+        cursor: pointer;
+    }
+
+    header > .flex-container > .header-links {
+        display: none;
+    }
+
+    main > .col-container-3 {
+        flex-direction: column;
+    }
+    
+    main > .col-container-3 > .flex-container {
+        display: flex;
+        flex-direction: row;
+    }
+    
+    main > .col-container-3 > .flex-container > img {
+        max-width: 30%;
+        max-height: 100%;
+    }
+    
+    main > .col-container-3 > .flex-container > .portfolio-text {
+        margin: auto 2.3rem;
+        max-height: 100%;
+        max-width: 70%;
+    }
+
+    main > p:nth-child(5) {
+        width: 80%;
+    }
+
+    main > .col-container-6 {
+        margin-top: 2rem;
+    }
+
+    main > .col-container-6 > .flex-container {
+        flex: 4 100%;
+        display: grid;
+        padding: 1.8rem;
+        grid-template-rows: 1fr 1fr;
+        grid-template-columns: 1fr 1fr;
+    }
+
+    main > .col-container-6 > .flex-container > .teammate {
+        padding: 1.8rem;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    main > .col-container-6 > .flex-container > .teammate > img {
+        margin-bottom: 0.8rem;
+    }
+    main > .col-container-6 > .flex-container > .teammate > * {
+        margin: 0.3rem;
+    }
+    main > .col-container-6 > .flex-container > .teammate > .team-social-media-links > a > i {
+        margin: auto 0.5em;
+        margin-top: 0.5em;
+    }
+
+    .teammate > h4 {
+        font-size: 1.4em;
+    }
+    
+    main > .col-container-6 > .cursor {
+        flex: 1;
+        padding: 1.8rem;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font-size: 2.5em;
+        color: var(--paragraph-color);
+    }
+
+    footer > .flex-container > a > span {
+        font-size: 1.1em;
+        font-weight: 700;
+        margin: 1rem;
+        letter-spacing: 0.1em;
+    }
+
+    footer > .flex-container > a > span > i {
+        width: 2.5rem;
+        height: 2.5rem;
+        margin: 0.5em;
+        margin-right: 0.8em;
+    }
+
+}
+
+@media only screen and (max-width: 768px) {
+
+    h4{
+        margin: 1.8rem auto;
+    }
+
+    main > .col-container-3 {
+        padding: 2rem;
+        margin: 2rem 0 4rem 0;
+    }
+
+    main > .col-container-3 > .flex-container {
+        flex-direction: column;
+        padding: 1rem 0;
+    }
+
+    main > .col-container-3 > .flex-container > img {
+        max-width: 100%;
+    }
+
+    main > .col-container-3 > .flex-container > .portfolio-text { 
+        align-self: center;
+        max-width: 100%;
+    }
+
+    main > .col-container-3 > .flex-container > .portfolio-text > p,
+    main > .col-container-3 > .flex-container > .portfolio-text > h4 { 
+        text-align: center;
+    }
+
+    main > .col-container-6 {
+        padding: 0;
+    }
+
+    main > .col-container-6 > .flex-container {
+        display: flex;
+        flex-direction: column;
+        padding: 0;
+    }
+    
+    main > .col-container-6 > .flex-container > .teammate {
+        padding: 0;
+        width: 100%;
+        margin: 2rem auto;
+    }
+
+    main > .col-container-6 > .flex-container > .teammate  > img{
+        width: 100%;
+    }
+
+    .teammate > h4{
+        font-size: 2em;
+    }
+
+    .team-social-media-links > a > i {
+        width: 2.6rem;
+        height: 2.6rem;
+        font-size: 1.2rem;
+    }
+
+    main > .col-container-6 > .cursor {
+        display: none;
+    }
+
+    footer {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        font-size: 1.4rem;
+    }
+
+    footer > hr {
+        width: 100%;
+    }
+
+    footer > .flex-container { 
+        flex-direction: column;
+        align-items: start;
+    }
+
+    footer > .flex-container > a > span > i {
+        width: 3.5rem;
+        height: 3.5rem;
+    }
+
+    footer > .col-container-3 {
+        flex-direction: column;
+        margin: 2rem 0 0 0;
+    }
+
+    footer > .col-container-3 > .flex-container {
+        width: 100%;
+        padding: 1rem 0;
+    }
+}
